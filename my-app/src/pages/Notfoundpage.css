@@ -1,0 +1,54 @@
+section.error-404 {
+  background-image: url(../../public/img/banner-404.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+.error-404 h1 {
+  text-shadow: 2.82px 2.82px red, 4px 0 red, 2.82px -2.82px red, 0 -4px red, -2.82px -2.82px red, -4px 0 red,
+    -2.82px 2.82px red, 0 4px red;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 98px;
+  color: black;
+}
+
+.error-404 h2 {
+  /* max-width: 512px; */
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.error-404 p {
+  font-size: 24px;
+}
+
+.error-404 div.button a {
+  display: block;
+  max-width: 250px;
+  margin: 0 auto;
+  padding: 18px 20px;
+  border: 2px solid red;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+}
+
+.error-404 div.button a:hover {
+  background: green;
+  transition: all 0.3s;
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  .error-404 h1 {
+    -webkit-text-stroke: 4px #c53720;
+    text-shadow: none;
+  }
+}
