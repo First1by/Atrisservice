@@ -1,0 +1,34 @@
+.react-player {
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3%;
+  row-gap: 20px;
+  background: url(file:///D:/project/Atrisservice/my-app/public/img/h2-parallax-1.jpg);
+  background: url(file:///D:/project/Atrisservice/my-app/public/img/avtomekhanik-199.jpg);
+  background: url(file:///D:/project/Atrisservice/my-app/public/img/shutterstock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-of-player {
+  box-shadow: 0 0 4px 4px #261717;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+.card-of-player:hover {
+  box-shadow: 0 0 2px 2px #3d3939;
+  transition: all 0.2s;
+}
+
+.react-player__preview {
+  transition: all 0.2s;
+}
+
+.react-player__preview:hover {
+  transition: all 0.2s;
+  transform: scale(1.05);
+  box-shadow: none;
+}

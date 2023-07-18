@@ -1,11 +1,16 @@
-section.error-404 {
-  background-image: url(../../public/img/banner-404.png);
+section.section-error-404 {
+  /* min-height: calc(100vh - 60px - 180px); */
+  height: 100%;
+  background-image: url(../../../public/img/banner-404.png);
   background-repeat: no-repeat;
   background-size: cover;
   color: #fff;
+  flex: 1;
 }
 
-.error-404 h1 {
+.section-error-404 h1 {
+  margin: 45px;
+  margin-bottom: 20px;
   text-shadow: 2.82px 2.82px red, 4px 0 red, 2.82px -2.82px red, 0 -4px red, -2.82px -2.82px red, -4px 0 red,
     -2.82px 2.82px red, 0 4px red;
   font-family: 'Roboto', sans-serif;
@@ -15,17 +20,24 @@ section.error-404 {
   color: black;
 }
 
-.error-404 h2 {
+.section-error-404 h2 {
+  margin: 0;
+  margin-top: 10px;
   /* max-width: 512px; */
   font-size: 48px;
   text-transform: uppercase;
 }
 
-.error-404 p {
+.section-error-404 p {
   font-size: 24px;
+  margin: 40px auto 10px;
 }
 
-.error-404 div.button a {
+.section-error-404 div.button {
+  margin-top: 45px;
+}
+
+.section-error-404 div.button a {
   display: block;
   max-width: 250px;
   margin: 0 auto;
@@ -41,13 +53,26 @@ section.error-404 {
   letter-spacing: 0.06em;
 }
 
-.error-404 div.button a:hover {
-  background: green;
+.section-error-404 div.button a:hover {
+  background: red;
   transition: all 0.3s;
 }
 
+.section-error-404 div.button a::after {
+  content: '';
+  width: 0px;
+  height: 1px;
+  display: block;
+  background: white;
+  transition: 0.6s;
+}
+
+.section-error-404 div.button a:hover::after {
+  width: 100%;
+}
+
 @supports (-webkit-text-stroke: 1px black) {
-  .error-404 h1 {
+  .section-error-404 h1 {
     -webkit-text-stroke: 4px #c53720;
     text-shadow: none;
   }

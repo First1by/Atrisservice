@@ -4,7 +4,7 @@ import './footer.css';
 function Footer() {
   return (
     <footer>
-      <h3>ATRISSERVICE</h3>
+      <h3>Первый Сварной</h3>
       <a href="https://rs.school/" target="_blank" rel="noreferrer"></a>
     </footer>
   );

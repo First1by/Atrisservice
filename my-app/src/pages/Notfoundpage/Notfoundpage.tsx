@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import './Notfoundpage.css';
+import './notfoundpage.css';
 
 const Notfoundpage = () => {
   return (
-    <section className="error-404">
+    <section className="section-error-404">
       <h1>404</h1>
       <h2>Страница не найдена</h2>
       <p>Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.</p>

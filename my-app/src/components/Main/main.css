@@ -1,13 +1,35 @@
-section {
+:root {
+  --font-user: 'Roboto', sans-serif;
+  --font-user1: 'Heebo', sans-serif;
+}
+
+#root {
+  height: 100%;
+}
+
+main {
   flex: 1;
 }
 
-.section {
+/* Global */
+
+.bg-section {
   display: flex;
   flex-direction: column;
+  height: 100%;
+  font-family: var(--font-user);
+  color: white;
+  background: url(../../../public/img/1-kr-photoaidcom-darken.jpg) no-repeat;
+  background-size: cover;
   align-items: center;
 }
 
-label {
-  margin: 0 5px;
-}
+/* .black-out {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+} */
