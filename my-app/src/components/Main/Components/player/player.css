@@ -1,3 +1,20 @@
+.our-works {
+  padding: 20px 0 0;
+  background: url(file:///D:/project/Atrisservice/my-app/public/img/shutterstock.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.example-works {
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #000000, 0 0 4px darkred, 0 0 4px #f2edf7, 0 0 4px #dbd2e3;
+}
+
 .react-player {
   padding: 3%;
   display: flex;
@@ -5,11 +22,6 @@
   justify-content: center;
   column-gap: 3%;
   row-gap: 20px;
-  background: url(file:///D:/project/Atrisservice/my-app/public/img/h2-parallax-1.jpg);
-  background: url(file:///D:/project/Atrisservice/my-app/public/img/avtomekhanik-199.jpg);
-  background: url(file:///D:/project/Atrisservice/my-app/public/img/shutterstock.png);
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-of-player {

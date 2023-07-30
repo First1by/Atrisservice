@@ -1,0 +1,36 @@
+.wrapper-company {
+  padding: 20px;
+  background: url(../../../../../public/img/background/about-company.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.wrapper-company h1 {
+  margin: 0 auto;
+  color: white;
+}
+
+.wrapper-company .content-company {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-company .content-company .card-image img {
+  max-width: 280px;
+  height: auto;
+  object-fit: cover;
+}
+
+.company .content-company .description-block {
+  max-width: 800px;
+}
+
+.company .content-company .description-block p {
+  color: white;
+}
+
+@media (max-width: 320px) {
+  .wrapper-company .content-company {
+    flex-direction: column;
+  }
+}

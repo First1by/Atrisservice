@@ -25,17 +25,12 @@ export default function Slider() {
   useEffect(() => {
     const slider = setInterval(() => {
       setCurrentIndex(currentIndex + 1);
-    }, 5000);
+    }, 5000000);
     return () => clearInterval(slider);
   }, [currentIndex]); // эффект срабатывает только при изменении currentIndex.
 
   return (
     <div className="main-slider">
-      <div className="title">
-        <h2>
-          <span>/</span>reviews
-        </h2>
-      </div>
       <div className="section-center">
         {people.map((person: IPeople, personIndex: number) => {
           const { id, image, name, title, quote } = person;
@@ -51,11 +46,14 @@ export default function Slider() {
 
           return (
             <article className={position} key={id}>
-              <img src={image} alt={name} className="person-image" width="200px" />
-              <h4>{name}</h4>
-              <p className="title">{title}</p>
-              <p className="text">{quote}</p>
-              <FaQuoteRight className="icon" />
+              <img src={image} alt={name} className="person-image" />
+              <div className="right-banner">
+                <div className="info-block">
+                  <h2>Мойка авто</h2>
+                  <p>Комплексы услуг для каждого</p>
+                </div>
+                <button className="podrobnee">Подробнее</button>
+              </div>
             </article>
           );
         })}

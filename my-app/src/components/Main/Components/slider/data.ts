@@ -16,8 +16,7 @@ const people = [
   },
   {
     id: 2,
-    image:
-      'https://underminer.club/uploads/posts/2021-12/1639249900_47-underminer-club-p-schastlivii-ofisnii-rabotnik-rabota-54.jpg',
+    image: './img/welded-pictures/w124.jpg',
     name: 'John Doe',
     title: 'regular girl',
     quote: 'Start editing to see some magic happen!',

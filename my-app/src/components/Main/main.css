@@ -14,14 +14,14 @@ main {
 /* Global */
 
 .bg-section {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   height: 100%;
   font-family: var(--font-user);
-  color: white;
-  background: url(../../../public/img/1-kr-photoaidcom-darken.jpg) no-repeat;
-  background-size: cover;
-  align-items: center;
+  /* color: white; */
+  /* background: url(../../../public/img/welded-pictures/svarka-fon-2-photoaidcom-darken.jpg) no-repeat; */
+  /* background-size: cover;
+  align-items: center; */
 }
 
 /* .black-out {
