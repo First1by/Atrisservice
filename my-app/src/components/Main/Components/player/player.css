@@ -1,6 +1,6 @@
 .our-works {
   padding: 20px 0 0;
-  background: url(file:///D:/project/Atrisservice/my-app/public/img/shutterstock.png);
+  background: url(../../../../../public/img/shutterstock.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
