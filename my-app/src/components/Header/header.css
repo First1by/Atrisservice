@@ -14,18 +14,16 @@
 }
 
 .header .navigator {
-  /* position: relative;
-  top: -10px; */
-  display: flex;
   padding: 5px 20px;
   margin: 0 auto;
-  width: 95%;
   width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 1%;
   background-color: #000000;
   color: #fff;
-  font-family: var(--font-user);
+  font-family: var(--font-user1);
   font-style: normal;
   font-weight: 500;
   box-shadow: 0px 0px 4px 1px #e9dddd;
@@ -36,6 +34,7 @@
   padding: 25px 40px;
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
   column-gap: 3%;
   background-color: #f2f3f3;
@@ -84,13 +83,11 @@
 }
 
 .header .navigator ul li.menu-point a.App-link:hover {
-  /* color: #6098ff; */
   color: #f9804b;
 }
 
 .header .navigator ul li.menu-point a.App-link.active {
   padding: 5px;
-  /* background-color: #f9804b; */
   color: #f9804b;
   text-decoration: none;
   border-radius: 5px;
@@ -100,7 +97,7 @@
   color: unset;
 }
 
-.btn4::after {
+.btn-effect::after {
   content: '';
   width: 0px;
   height: 1px;
@@ -109,6 +106,76 @@
   transition: 0.6s;
 }
 
-.btn4:hover::after {
+.btn-effect:hover::after {
   width: 100%;
+}
+
+button.do-form {
+  min-width: 190px;
+  background: #dc1515;
+  padding: 5px 20px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.4s;
+}
+
+button.do-form:hover {
+  background: cornflowerblue;
+  transition: all 0.4s;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.contacts a.nav-tel::before {
+  content: '';
+  background-image: url(../../../public/img/icons/tel.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.working-hours {
+  padding: 0 5px;
+  max-width: 250px;
+  box-shadow: 0px 0px 4px 1px #e9dddd;
+}
+
+.adress-container {
+  max-width: 250px;
+  color: #333333;
+}
+
+.App-link,
+.contacts,
+.working-hours,
+.adress-container,
+.location {
+  color: #333333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.time-text {
+  font-size: 12px;
+}
+
+.time-text::before {
+  content: '';
+  background-image: url(../../../public/img/icons/time.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 18px;
+  height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
 }

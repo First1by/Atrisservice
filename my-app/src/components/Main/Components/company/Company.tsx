@@ -1,7 +1,9 @@
+import Scrollbar from '../scrollbar/Scrollbar';
 import './company.css';
 function Company() {
   return (
     <div className="wrapper-company">
+      <div className="blackwindow"></div>
       <h1>О компании</h1>
       <div className="content-company">
         <div className="card-image">
@@ -16,6 +18,7 @@ function Company() {
           <button>Узнать больше</button>
         </div>
       </div>
+      <Scrollbar />
     </div>
   );
 }

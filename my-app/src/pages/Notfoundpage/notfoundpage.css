@@ -1,5 +1,5 @@
 section.section-error-404 {
-  /* min-height: calc(100vh - 60px - 180px); */
+  min-height: 80vh;
   height: 100%;
   background-image: url(../../../public/img/banner-404.png);
   background-repeat: no-repeat;
@@ -33,11 +33,11 @@ section.section-error-404 {
   margin: 40px auto 10px;
 }
 
-.section-error-404 div.button {
+.section-error-404 div.button-back {
   margin-top: 45px;
 }
 
-.section-error-404 div.button a {
+.section-error-404 div.button-back a {
   display: block;
   max-width: 250px;
   margin: 0 auto;
@@ -53,12 +53,12 @@ section.section-error-404 {
   letter-spacing: 0.06em;
 }
 
-.section-error-404 div.button a:hover {
+.section-error-404 div.button-back a:hover {
   background: red;
   transition: all 0.3s;
 }
 
-.section-error-404 div.button a::after {
+.section-error-404 div.button-back a::after {
   content: '';
   width: 0px;
   height: 1px;
@@ -67,7 +67,7 @@ section.section-error-404 {
   transition: 0.6s;
 }
 
-.section-error-404 div.button a:hover::after {
+.section-error-404 div.button-back a:hover::after {
   width: 100%;
 }
 

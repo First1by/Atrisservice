@@ -1,0 +1,27 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.interactive-img {
+  padding: 20px;
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  box-shadow: 0px 0px 60px 5px rgb(141 139 139);
+  background-image: radial-gradient(#434343a3, #000000c9);
+}
+
+.canvas-wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 640px;
+  height: 320px;
+}
+
+.img1,
+.img2,
+.img3,
+.img-main {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}

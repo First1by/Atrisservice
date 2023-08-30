@@ -4,6 +4,7 @@ import Player from './Components/player/Player';
 import './main.css';
 import Cards from './Components/card/Card';
 import Company from './Components/company/Company';
+import Illustration from './Components/illustration/Illustration';
 
 function Main() {
   return (
@@ -13,6 +14,9 @@ function Main() {
       </section>
       <section className="our-works">
         <Player />
+      </section>
+      <section className="interactive-img">
+        <Illustration />
       </section>
       <section>
         <Cards />

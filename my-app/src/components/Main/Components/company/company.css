@@ -1,8 +1,26 @@
 .wrapper-company {
-  padding: 20px;
+  position: relative;
+  padding: 20px 0 0 0;
   background: url(../../../../../public/img/background/about-company.png);
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.wrapper-company *:not(.blackwindow) {
+  z-index: 5;
+  position: relative;
+}
+
+.blackwindow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: #000;
+  opacity: 0.7;
 }
 
 .wrapper-company h1 {
@@ -11,12 +29,13 @@
 }
 
 .wrapper-company .content-company {
+  padding: 0 20px;
   display: flex;
   justify-content: center;
 }
 
 .wrapper-company .content-company .card-image img {
-  max-width: 280px;
+  max-width: 220px;
   height: auto;
   object-fit: cover;
 }

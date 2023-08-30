@@ -7,7 +7,7 @@ const Notfoundpage = () => {
       <h1>404</h1>
       <h2>Страница не найдена</h2>
       <p>Извините, но такой страницы нет на нашем сайте. Возможно вы ввели неправильный адрес.</p>
-      <div className="button">
+      <div className="button-back">
         <Link to="/">Перейти на главную</Link>
       </div>
     </section>

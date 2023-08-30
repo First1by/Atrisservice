@@ -9,23 +9,23 @@ function Header() {
         <nav>
           <ul className="menu">
             <li className="menu-point ">
-              <NavLink className="App-link btn4" to="/services">
+              <NavLink className="App-link btn-effect" to="/services">
                 Услуги
               </NavLink>
             </li>
             <li className="menu-point">
-              <NavLink className="App-link btn4" to="/discount">
+              <NavLink className="App-link btn-effect" to="/discount">
                 Акции
               </NavLink>
             </li>
             <li className="menu-point">Цены</li>
             <li className="menu-point">Отзывы</li>
             <li className="menu-point">
-              <NavLink className="App-link btn4" to="/about">
+              <NavLink className="App-link btn-effect" to="/about">
                 О компании
               </NavLink>
             </li>
-            <li className="menu-point btn4">Контакты</li>
+            <li className="menu-point btn-effect">Контакты</li>
             <li className="menu-point">
               <NavLink className="App-link" to="tel:+375296384455">
                 +375 (29) 377-14-40
@@ -40,6 +40,22 @@ function Header() {
         <h1 className="logo">
           Первый <span className="svarnoy">Сварной</span>
         </h1>
+        <div className="contacts">
+          <NavLink className="App-link nav-tel" to="tel:+375296384455">
+            +375 29 377-14-40
+          </NavLink>
+          <NavLink className="App-link nav-tel" to="tel:+375336384455">
+            +375 33 377-14-40
+          </NavLink>
+          <div className="working-hours">
+            <span className="time-text">пн-пт 08:00–17:00; сб 10:00–17:00</span>
+          </div>
+        </div>
+        <div className="adress-container">
+          <div className="adress">г.Минск, ул. Петруся Бровки, 30/11 </div>
+          <div className="social-elements"></div>
+        </div>
+        <div className="location">Схема проезда</div>
       </div>
     </header>
   );

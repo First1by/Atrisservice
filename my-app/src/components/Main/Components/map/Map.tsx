@@ -16,7 +16,7 @@ function YMap() {
       <YMaps>
         <Map
           width="100%"
-          height={450}
+          height={300}
           defaultState={{
             center: [53.909326, 27.60143],
             zoom: 9,
