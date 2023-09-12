@@ -1,0 +1,41 @@
+.popup-container {
+  position: absolute;
+  z-index: 5;
+  left: calc(50% - (400px / 2));
+  top: calc(50% - (380px / 2));
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  color: black;
+  background: linear-gradient(177.09deg, #ffffff 6.15%, #0d606f 202.69%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+}
+
+.popup-container .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #ffffff;
+  box-shadow: 0px 0px 3px rgb(13 96 111 / 8%), 0px 2px 3px rgb(13 96 111 / 16%);
+  background: #ffffff;
+  border-radius: 6px;
+  padding: 10px 15px;
+}
+
+.input-label,
+.button-orange {
+  display: block;
+  margin-top: 15px;
+}
+
+.input-title {
+  display: block;
+  margin-right: 0;
+  margin-bottom: 10px;
+}

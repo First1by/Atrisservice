@@ -4,10 +4,11 @@ import './illustration.css';
 import data from './data';
 // import { NativeSyntheticEvent } from 'react-native';
 
-const canvasWrapper = document.querySelector('.canvas-wrapper') as HTMLElement;
+// const canvasWrapper = document.querySelector('.canvas-wrapper') as HTMLElement;
 
 const Illustration = () => {
   const [area, setArea] = React.useState(0);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [coord, setCoord] = React.useState(data);
 
   function onMove(e: React.MouseEvent<HTMLElement>): void {

@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import './slider.css';
 import data, { IPeople } from './data';
-import { FaQuoteRight } from 'react-icons/fa';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 export default function Slider() {
@@ -33,7 +32,7 @@ export default function Slider() {
     <div className="main-slider">
       <div className="section-center">
         {people.map((person: IPeople, personIndex: number) => {
-          const { id, image, name, title, quote } = person;
+          const { id, image, name } = person;
 
           let position = 'nextSlide';
           if (personIndex === currentIndex) {
@@ -45,7 +44,8 @@ export default function Slider() {
           }
 
           return (
-            <article className={position} key={id}>
+            <article className={`${position} container-slider`} key={id}>
+              <div className="blackwindow"></div>
               <img src={image} alt={name} className="person-image" />
               <div className="right-banner">
                 <div className="info-block">

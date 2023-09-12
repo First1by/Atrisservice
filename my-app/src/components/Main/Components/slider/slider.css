@@ -26,11 +26,17 @@ article.nextSlide {
   transform: translateX(100%);
 }
 
+article.container-slider *:not(.blackwindow) {
+  z-index: 10;
+}
+
 article div.right-banner {
   position: absolute;
+  z-index: 10;
   top: 20px;
   right: 20px;
   width: 50%;
+  color: white;
 }
 
 article div.right-banner .info-block {

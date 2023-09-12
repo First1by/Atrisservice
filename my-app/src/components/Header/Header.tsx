@@ -1,8 +1,23 @@
-import React from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Popup from './components/popup';
 import './header.css';
 
 function Header() {
+  const [popupVisible, setPopupVisible] = useState<boolean>(false);
+
+  function togglePopup() {
+    setPopupVisible(!popupVisible);
+  }
+
+  window.onclick = (e) => {
+    if (e.target instanceof HTMLElement) {
+      if (!e.target.closest('.popup-container') && !e.target.closest('.do-form')) {
+        setPopupVisible(false);
+      }
+    }
+  };
+
   return (
     <header className="header">
       <div className="navigator">
@@ -33,7 +48,9 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <button className="do-form">Оставить заявку</button>
+        <button onClick={togglePopup} className="do-form">
+          Оставить заявку
+        </button>
       </div>
       <div className="banner">
         <img src="./img/logo.png " alt="Первый Сварной" />
@@ -57,6 +74,7 @@ function Header() {
         </div>
         <div className="location">Схема проезда</div>
       </div>
+      {popupVisible ? <Popup /> : ''}
     </header>
   );
 }
