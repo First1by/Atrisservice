@@ -39,3 +39,18 @@
   margin-right: 0;
   margin-bottom: 10px;
 }
+
+.byeForm {
+  color: black;
+}
+
+.button-back-to-main {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 5px 20px;
+  background: #dc1515;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: all 0.4s;
+}

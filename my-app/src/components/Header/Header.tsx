@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from './components/popup';
 import './header.css';
@@ -10,9 +10,13 @@ function Header() {
     setPopupVisible(!popupVisible);
   }
 
+  const closePopup = (): void => {
+    togglePopup();
+  };
+
   window.onclick = (e) => {
     if (e.target instanceof HTMLElement) {
-      if (!e.target.closest('.popup-container') && !e.target.closest('.do-form')) {
+      if (!e.target.closest('.popup-container') && !e.target.closest('.do-form') && !e.target.closest('.byeForm')) {
         setPopupVisible(false);
       }
     }
@@ -29,11 +33,17 @@ function Header() {
               </NavLink>
             </li>
             <li className="menu-point">
-              <NavLink className="App-link btn-effect" to="/discount">
+              <NavLink className="App-link btn-effect" to="/promo">
                 Акции
               </NavLink>
             </li>
-            <li className="menu-point">Цены</li>
+
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/price">
+                Цены
+              </NavLink>
+            </li>
+
             <li className="menu-point">Отзывы</li>
             <li className="menu-point">
               <NavLink className="App-link btn-effect" to="/about">
@@ -53,7 +63,9 @@ function Header() {
         </button>
       </div>
       <div className="banner">
-        <img src="./img/logo.png " alt="Первый Сварной" />
+        <NavLink to="/">
+          <img src="./img/logo.png " alt="Первый Сварной" title="На главную" />
+        </NavLink>
         <h1 className="logo">
           Первый <span className="svarnoy">Сварной</span>
         </h1>
@@ -74,7 +86,7 @@ function Header() {
         </div>
         <div className="location">Схема проезда</div>
       </div>
-      {popupVisible ? <Popup /> : ''}
+      {popupVisible ? <Popup close={closePopup} /> : ''}
     </header>
   );
 }

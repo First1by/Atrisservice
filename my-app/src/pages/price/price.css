@@ -1,0 +1,47 @@
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+table,
+th,
+td {
+  padding: 8px;
+  border: 1px solid #767676;
+  /* word-break: break-all; */
+}
+
+tbody tr:nth-child(even) {
+  background-color: #e1e1e1;
+}
+
+.button-div {
+  margin: 20px 0;
+}
+
+button.write-to-repair {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 16px 20px;
+  max-width: 300px;
+  background: linear-gradient(113.96deg, #f9804b 1.49%, #fe9013 101.44%);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}

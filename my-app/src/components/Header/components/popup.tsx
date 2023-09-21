@@ -1,12 +1,14 @@
 import './popup.css';
-import React, { useRef } from 'react';
+import '../../../pages/Notfoundpage/notfoundpage.css';
+
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-function Popup() {
+
+function Popup(props: { close: () => void }) {
   const form = useRef(null);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
-  const sendEmail = (e: any) => {
-    e.preventDefault();
-
+  const sendEmail = () => {
     emailjs.sendForm('service_e8g9r2j', 'template_3da05r7', form.current!, '3czTbEdzkuv5-Hj3s').then(
       (result) => {
         console.log(result.text);
@@ -15,29 +17,67 @@ function Popup() {
         console.log(error.text);
       }
     );
-    e.target.reset();
+    // e.target.reset();
   };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const minutes = 0.2;
+    const now = new Date().getTime();
+    const setupTime = localStorage.getItem('setupTime');
+    if (setupTime == null) {
+      localStorage.setItem('setupTime', now.toString());
+    } else {
+      debugger;
+      if (Number(now) - Number(setupTime) > minutes * 60 * 1000) {
+        localStorage.setItem('setupTime', now.toString());
+        setTermsAccepted(true);
+        sendEmail();
+      }
+    }
+  };
+
+  if (!termsAccepted) {
+    return (
+      <div className="popup-container">
+        <form className="form" ref={form} onSubmit={handleSubmit} action="mailto:html@yandex.ru" encType="text/plain">
+          <label className="input-label">
+            <span className="input-title">Ваше имя</span>
+            <input className="input" type="text" name="user_name" required />
+          </label>
+          <label className="input-label">
+            <span className="input-title">Ваш номер телефона</span>
+            <input
+              className="input"
+              type="tel"
+              name="user_email"
+              placeholder="+375(29)_ _ _  _ _  _ _"
+              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+              required
+            />
+          </label>
+          <label className="input-label">
+            <span className="input-title">Сообщение</span>
+            <textarea className="input" name="message" required />
+          </label>
+          <button className="button button-orange" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <div className="popup-container">
-      <form className="form" ref={form} onSubmit={sendEmail} action="mailto:html@yandex.ru" encType="text/plain">
-        <label className="input-label">
-          <span className="input-title">Ваше имя</span>
-          <input className="input" type="text" name="user_name" required />
-        </label>
-        <label className="input-label">
-          <span className="input-title">Ваш Email</span>
-          <input className="input" type="text" name="user_email" required />
-        </label>
-        <label className="input-label">
-          <span className="input-title">Сообщение</span>
-          <textarea className="input" name="message" required />
-        </label>
-        <button className="button button-orange" type="submit">
-          Отправить
-        </button>
-      </form>
+      <div className="">
+        <h2>Спасибо, ваша заявка принята</h2>
+        <div>Наш менеджер свяжется с вами в ближайшее время</div>
+      </div>
+      <div className="button-back-to-main" onClick={props.close}>
+        Перейти на главную
+      </div>
     </div>
   );
 }
-
 export default Popup;

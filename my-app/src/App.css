@@ -1,3 +1,8 @@
+.section-bg-color {
+  background-color: #ededed;
+  flex: 1;
+}
+
 .App {
   /* height: 100vh; */
   min-height: 100%;
