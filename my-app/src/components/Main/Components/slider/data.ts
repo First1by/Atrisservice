@@ -28,13 +28,6 @@ const people = [
     title: 'product designer',
     quote: 'Start editing to see some magic happen!',
   },
-  {
-    id: 4,
-    image: 'https://i.baraholka.com.ru/files/3/6/3630018.jpg',
-    name: 'Jim Dyson',
-    title: 'developer',
-    quote: 'Start editing to see some magic happen!',
-  },
 ];
 
 export default people;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from './components/popup';
 import './header.css';
@@ -44,18 +44,22 @@ function Header() {
               </NavLink>
             </li>
 
-            <li className="menu-point">Отзывы</li>
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/reviews">
+                Отзывы
+              </NavLink>
+            </li>
             <li className="menu-point">
               <NavLink className="App-link btn-effect" to="/about">
                 О компании
               </NavLink>
             </li>
             <li className="menu-point btn-effect">Контакты</li>
-            <li className="menu-point">
+            {/* <li className="menu-point">
               <NavLink className="App-link" to="tel:+375296384455">
                 +375 (29) 377-14-40
               </NavLink>
-            </li>
+            </li> */}
           </ul>
         </nav>
         <button onClick={togglePopup} className="do-form">
@@ -70,10 +74,10 @@ function Header() {
           Первый <span className="svarnoy">Сварной</span>
         </h1>
         <div className="contacts">
-          <NavLink className="App-link nav-tel" to="tel:+375296384455">
+          <NavLink className="link nav-tel" to="tel:+375296384455">
             +375 29 377-14-40
           </NavLink>
-          <NavLink className="App-link nav-tel" to="tel:+375336384455">
+          <NavLink className="link nav-tel" to="tel:+375336384455">
             +375 33 377-14-40
           </NavLink>
           <div className="working-hours">
@@ -81,10 +85,14 @@ function Header() {
           </div>
         </div>
         <div className="adress-container">
-          <div className="adress">г.Минск, ул. Петруся Бровки, 30/11 </div>
+          <div className="adress">г.Минск, ул. Петруся Бровки, 30/11</div>
           <div className="social-elements"></div>
         </div>
-        <div className="location">Схема проезда</div>
+        <div className="location">
+          <a className="link" href="#footer">
+            Схема проезда
+          </a>
+        </div>
       </div>
       {popupVisible ? <Popup close={closePopup} /> : ''}
     </header>

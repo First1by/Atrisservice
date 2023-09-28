@@ -2,6 +2,9 @@ import { useEffect, useState } from 'react';
 import './slider.css';
 import data, { IPeople } from './data';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import FirstSlide from './components/FirstSlide';
+import SecondSlide from './components/SecondSlide';
+import ThirdSlide from './components/ThirdSlide';
 
 export default function Slider() {
   //Объявляем переменные состояния
@@ -47,13 +50,15 @@ export default function Slider() {
             <article className={`${position} container-slider`} key={id}>
               <div className="blackwindow"></div>
               <img src={image} alt={name} className="person-image" />
-              <div className="right-banner">
-                <div className="info-block">
-                  <h2>Мойка авто</h2>
-                  <p>Комплексы услуг для каждого</p>
-                </div>
-                <button className="podrobnee">Подробнее</button>
-              </div>
+              {currentIndex === 0 ? (
+                <FirstSlide />
+              ) : currentIndex === 1 ? (
+                <SecondSlide />
+              ) : currentIndex === 2 ? (
+                <ThirdSlide />
+              ) : (
+                ''
+              )}
             </article>
           );
         })}

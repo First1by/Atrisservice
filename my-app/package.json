@@ -30,6 +30,7 @@
     "react-dom": "^18.2.0",
     "react-horizontal-scrolling-menu": "4.0.1",
     "react-icons": "^4.10.1",
+    "react-input-mask": "^2.0.4",
     "react-native": "^0.72.3",
     "react-player": "^2.12.0",
     "react-router-dom": "^6.9.0",
@@ -71,6 +72,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/react-input-mask": "^3.0.3",
     "@types/react-router-dom": "^5.3.3"
   }
 }

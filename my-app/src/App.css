@@ -10,3 +10,19 @@
   flex-direction: column;
   text-align: center;
 }
+
+.App-link:hover {
+  color: #f9804b;
+  transition: all 0.2s linear;
+}
+
+.link {
+  color: #333333;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link:hover {
+  color: #f9804b;
+  transition: all 0.2s linear;
+}

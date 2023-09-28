@@ -8,6 +8,7 @@ import Notfoundpage from 'pages/Notfoundpage/Notfoundpage';
 import Services from 'pages/Services/Services';
 import Promo from 'pages/promo/promo';
 import Price from 'pages/price/price';
+import Reviews from 'pages/reviews/Reviews';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/promo" element={<Promo />}></Route>
         <Route path="/price" element={<Price />}></Route>
         <Route path="/services" element={<Services />}></Route>
+        <Route path="/reviews" element={<Reviews />}></Route>
         <Route path="/about" element={<Aboutpage />}></Route>
         <Route path="*" element={<Notfoundpage />} />
       </Routes>

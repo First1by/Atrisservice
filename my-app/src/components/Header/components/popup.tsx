@@ -1,6 +1,7 @@
 import './popup.css';
 import '../../../pages/Notfoundpage/notfoundpage.css';
 
+import InputMask from 'react-input-mask';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -47,13 +48,20 @@ function Popup(props: { close: () => void }) {
           </label>
           <label className="input-label">
             <span className="input-title">Ваш номер телефона</span>
-            <input
+            {/* <input
               className="input"
               type="tel"
               name="user_email"
               placeholder="+375(29)_ _ _  _ _  _ _"
               pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
               required
+            /> */}
+            <InputMask
+              className="input"
+              {...props}
+              mask="+375\ 99 999 99 99"
+              maskChar=" "
+              placeholder="+375 (29) _ _ _  _ _  _ _"
             />
           </label>
           <label className="input-label">
