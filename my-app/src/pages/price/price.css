@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+.price-container td {
+  width: 30%;
+}
+
 table {
   border-collapse: collapse;
   margin: 0 auto;
@@ -23,7 +27,7 @@ tbody tr:nth-child(even) {
 }
 
 .button-div {
-  margin: 20px 0;
+  margin: 10px 0;
 }
 
 button.write-to-repair {

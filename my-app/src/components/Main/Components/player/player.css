@@ -1,5 +1,5 @@
-.our-works {
-  padding: 20px 0 0;
+section.our-works {
+  padding: 30px 0 30px 0;
   background: url(../../../../../public/img/shutterstock.png);
   background-repeat: no-repeat;
   background-size: cover;
@@ -7,7 +7,6 @@
 
 .example-works {
   margin: 0 auto;
-  font-size: 20px;
   font-family: 'Roboto', sans-serif;
   font-weight: 700;
   color: white;

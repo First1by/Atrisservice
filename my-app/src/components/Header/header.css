@@ -32,7 +32,7 @@
 
 .header .banner {
   margin: 0 auto;
-  padding: 25px 40px;
+  padding: 20px 40px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,7 +53,7 @@
 }
 
 .header .banner img:hover {
-  box-shadow: 0px 0px 8px 5px #f71a1a;
+  box-shadow: none;
 }
 
 .header .banner h1.logo {
@@ -116,12 +116,13 @@
   width: 100%;
 }
 
-button.do-form {
+.do-form {
   min-width: 200px;
   background: #dc1515;
   padding: 8px 20px;
   border-radius: 3px;
-  border: none;
+  border: 1.5px solid;
+  border-color: transparent;
   cursor: pointer;
   color: white;
   transition: all 0.4s;
@@ -129,10 +130,13 @@ button.do-form {
   font-family: var(--font-user1);
   font-style: normal;
   font-weight: 500;
+  text-decoration: none;
 }
 
-button.do-form:hover {
-  background: cornflowerblue;
+.do-form:hover {
+  /* background: cornflowerblue; */
+  background: none;
+  border: 1.5px solid #dc1515;
   transition: all 0.4s;
 }
 
@@ -156,7 +160,7 @@ button.do-form:hover {
 
 .working-hours {
   padding: 0 5px;
-  max-width: 250px;
+  max-width: 270px;
   box-shadow: 0px 0px 4px 1px #e9dddd;
 }
 
@@ -176,7 +180,7 @@ button.do-form:hover {
 }
 
 .time-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .time-text::before {

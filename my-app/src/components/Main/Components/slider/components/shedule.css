@@ -1,0 +1,49 @@
+.container-shedule {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.title-shedule {
+  display: flex;
+  /* align-items: center; */
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.title-shedule .clock-image {
+  background-color: #232020;
+  padding: 10px 10px 10px 10px;
+}
+
+.title-shedule .clock-image img {
+  filter: invert();
+}
+
+.title-shedule .text-title {
+  display: flex;
+  padding: 10px 10px 10px 10px;
+  background: #393030;
+  width: 100%;
+  align-items: center;
+}
+
+.time-shedule {
+  padding: 10px 20px;
+  background-color: #61616942;
+}
+
+.time-shedule > div {
+  display: flex;
+  padding: 10px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+}
+
+.lunch-shedule {
+  padding: 15px 0;
+  text-align: center;
+  background: #393030;
+}

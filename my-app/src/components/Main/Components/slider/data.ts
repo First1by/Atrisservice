@@ -9,21 +9,21 @@ export interface IPeople {
 const people = [
   {
     id: 1,
-    image: 'https://world-psychology.ru/wp-content/uploads/2016/05/o-rabote-2.jpg',
+    image: './img/slider/svarka-fon-krasivie-7.jpg',
     name: 'Maria Ferguson',
     title: 'office manager',
     quote: 'Start editing to see some magic happen!',
   },
   {
     id: 2,
-    image: './img/welded-pictures/w124.jpg',
+    image: './img/slider/sv3.jpg',
     name: 'John Doe',
     title: 'regular girl',
     quote: 'Start editing to see some magic happen!',
   },
   {
     id: 3,
-    image: 'https://kto-chto-gde.ru/wp-content/uploads/2017/07/37257801_l.jpg',
+    image: './img/slider/weld-place.jpg',
     name: 'Peter Smith',
     title: 'product designer',
     quote: 'Start editing to see some magic happen!',
