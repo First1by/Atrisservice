@@ -1,3 +1,4 @@
+import Blackout from 'components/Blackout';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from './components/popup';
@@ -8,6 +9,7 @@ function Header() {
 
   function togglePopup() {
     setPopupVisible(!popupVisible);
+    // blackout.classList.toggle('on-blackout');
   }
 
   const closePopup = (): void => {
@@ -94,7 +96,15 @@ function Header() {
           </a>
         </div>
       </div>
-      {popupVisible ? <Popup close={closePopup} /> : ''}
+      {popupVisible ? (
+        <>
+          <Popup close={closePopup} />
+          <Blackout />
+        </>
+      ) : (
+        ''
+      )}
+      {/* {popupVisible ? (blackout.style.display = 'block') : (blackout.style.display = 'none')} */}
     </header>
   );
 }

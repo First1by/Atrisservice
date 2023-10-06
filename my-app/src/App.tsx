@@ -9,10 +9,20 @@ import Services from 'pages/Services/Services';
 import Promo from 'pages/promo/promo';
 import Price from 'pages/price/price';
 import Reviews from 'pages/reviews/Reviews';
+import Blackout from 'components/Blackout';
+import { useState } from 'react';
+
+// const blackout = document.querySelector('.blackout') as HTMLElement;
 
 function App() {
+  //   const [blackoutVisible, setBlackoutVisible] = useState<boolean>(false);
+
+  //   const closeBlackout = (): void => {
+  //     setBlackoutVisible(true);
+  //   };
   return (
     <div className="App">
+      {/* {blackoutVisible ? <Blackout close={closeBlackout} /> : ''} */}
       <Header />
       <Routes>
         <Route path="/" element={<Main />}></Route>
@@ -24,6 +34,7 @@ function App() {
         <Route path="*" element={<Notfoundpage />} />
       </Routes>
       <Footer />
+      {/* <div className="blackout"></div> */}
     </div>
   );
 }

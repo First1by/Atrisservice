@@ -26,3 +26,19 @@
   color: #f9804b;
   transition: all 0.2s linear;
 }
+
+.blackout {
+  display: block;
+  /* visibility: hidden; */
+  position: fixed;
+  z-index: 1; /* поверх всех элементов */
+  left: 0;
+  top: 0;
+  width: 100vw; /* полная ширина */
+  height: 100vh; /* полная высота */
+  background-color: rgba(0, 0, 0, 0.8); /* цвет фона - прозрачный черный */
+}
+
+.on-blackout {
+  display: block;
+}

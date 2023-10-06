@@ -27,7 +27,7 @@ export default function Slider() {
   useEffect(() => {
     const slider = setInterval(() => {
       setCurrentIndex(currentIndex + 1);
-    }, 5000000);
+    }, 3000000);
     return () => clearInterval(slider);
   }, [currentIndex]); // эффект срабатывает только при изменении currentIndex.
 
@@ -59,6 +59,7 @@ export default function Slider() {
               ) : (
                 ''
               )}
+              <p>MATIA FERGUSSON</p>
             </article>
           );
         })}
