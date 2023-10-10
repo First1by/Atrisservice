@@ -5,6 +5,7 @@ import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import FirstSlide from './components/FirstSlide';
 import SecondSlide from './components/SecondSlide';
 import ThirdSlide from './components/ThirdSlide';
+import SlidesContainer from './components/SlidesContainer';
 
 export default function Slider() {
   //Объявляем переменные состояния
@@ -50,16 +51,7 @@ export default function Slider() {
             <article className={`${position} container-slider`} key={id}>
               <div className="blackwindow"></div>
               <img src={image} alt={name} className="person-image" />
-              {currentIndex === 0 ? (
-                <FirstSlide />
-              ) : currentIndex === 1 ? (
-                <SecondSlide />
-              ) : currentIndex === 2 ? (
-                <ThirdSlide />
-              ) : (
-                ''
-              )}
-              <p>MATIA FERGUSSON</p>
+              <SlidesContainer id={id} />
             </article>
           );
         })}
