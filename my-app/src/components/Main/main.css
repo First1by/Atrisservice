@@ -19,6 +19,8 @@ main {
   height: 100%;
   font-family: var(--font-user);
   color: white;
+  border-bottom: 1px solid #dc1515;
+
   /* background: url(../../../public/img/welded-pictures/svarka-fon-2-photoaidcom-darken.jpg) no-repeat; */
   /* background-size: cover;
   align-items: center; */

@@ -91,10 +91,18 @@ const Illustration = () => {
 
   return (
     <div className="canvas-wrapper" onMouseMove={onMove} onTouchStart={touchStart}>
-      <img className="img1" src="https://i.postimg.cc/pV10rP5z/img1-longeron.png" title="Лонжероны от 300 руб" alt="" />
-      <img className="img2" src="https://i.postimg.cc/3ryqgyTn/img2-porog.png" title="Пороги от 150 руб" alt="" />
-      <img className="img3" src="https://i.postimg.cc/Wb4My4jC/img3-dno.png" title="Днище от 50 руб" alt="" />
-      <img className="img-main" src="https://i.postimg.cc/R0M1GYnv/img1.png" alt="" />
+      <h2>
+        Выберите необходимую деталь для ремонта <span>Узнай стоимость</span>
+      </h2>
+      <div className="img1-container">
+        <img className="img1" src="/img/illustration/img1-longeron.png" title="Лонжероны от 300 руб" alt="" />
+      </div>
+      <img className="img2" src="/img/illustration/img2-porog.png" title="Пороги от 150 руб" alt="" />
+      <img className="img3" src="/img/illustration/img3-dno.png" title="Днище от 50 руб" alt="" />
+      <img className="img4" src="/img/illustration/img4-stakan.png" title="Стаканы от 200 руб" alt="" />
+      <img className="img5" src="/img/illustration/img5-zad-krylo.png" title="Крыло заднее от 130 руб" alt="" />
+      <img className="img6" src="/img/illustration/img6-bagazh.png" title="Днище багажника от 80 руб" alt="" />
+      <img className="img-main" src="/img/illustration/img-original.png" alt="" />
     </div>
   );
 };

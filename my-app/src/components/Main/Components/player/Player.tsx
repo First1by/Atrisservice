@@ -3,7 +3,7 @@ import './player.css';
 function Player() {
   return (
     <>
-      <h2 className="example-works">Примеры работ</h2>
+      <h2 className="example-works">Видео работ с разными марками авто</h2>
       <div className="react-player">
         <ReactPlayer
           className="card-of-player"

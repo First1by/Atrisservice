@@ -7,16 +7,74 @@
 
 .canvas-wrapper {
   position: relative;
-  margin: 0 auto;
-  width: 640px;
-  height: 320px;
+  height: 550px;
+}
+
+.canvas-wrapper h2 {
+  position: relative;
+  margin: 30px auto;
+  padding: 15px;
+  max-width: 58vw;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5vw;
+  line-height: 85%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  border-left: 3px solid red;
+  background-color: rgba(0, 0, 0, 0.445);
+  white-space: nowrap;
+}
+
+.canvas-wrapper h2 span {
+  display: inline-block;
+  margin-left: 2%;
+  padding: 1.5%;
+  border-radius: 5px;
+  background: yellowgreen;
+  cursor: pointer;
 }
 
 .img1,
 .img2,
 .img3,
+.img4,
+.img5,
+.img6,
 .img-main {
   position: absolute;
-  left: 0;
+  left: calc(50% - 750px / 2);
   z-index: 1;
+  width: 750px;
+  height: auto;
+}
+
+.img1-container:after {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  content: 'Лонжероны от 300 руб';
+  opacity: 0;
+  scale: 0;
+  transition: 0.4s all;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.img1-container:hover::after {
+  content: 'Лонжероны от 300 руб';
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  z-index: 100;
+  opacity: 1;
+  scale: 1;
+  background: rgba(5, 13, 156, 0.55);
+  color: #fff;
+  text-align: center;
+  font-family: cursive;
+  font-size: 16px;
+  transition: 0.5s all;
 }
