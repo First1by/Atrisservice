@@ -94,8 +94,8 @@ const Illustration = () => {
       <h2>
         Выберите необходимую деталь для ремонта <span>Узнай стоимость</span>
       </h2>
-      <div className="img1-container">
-        <img className="img1" src="/img/illustration/img1-longeron.png" title="Лонжероны от 300 руб" alt="" />
+      <div className="img1-text" data-title="Лонжероны от 300 руб">
+        <img className="img1" src="/img/illustration/img1-longeron.png" alt="" />
       </div>
       <img className="img2" src="/img/illustration/img2-porog.png" title="Пороги от 150 руб" alt="" />
       <img className="img3" src="/img/illustration/img3-dno.png" title="Днище от 50 руб" alt="" />

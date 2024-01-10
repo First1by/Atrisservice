@@ -48,14 +48,6 @@ function Popup(props: { close: () => void }) {
           </label>
           <label className="input-label">
             <span className="input-title">Ваш номер телефона</span>
-            {/* <input
-              className="input"
-              type="tel"
-              name="user_email"
-              placeholder="+375(29)_ _ _  _ _  _ _"
-              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
-              required
-            /> */}
             <InputMask
               className="input"
               {...props}
@@ -66,7 +58,14 @@ function Popup(props: { close: () => void }) {
           </label>
           <label className="input-label">
             <span className="input-title">Сообщение</span>
-            <textarea className="input" name="message" required />
+            <textarea
+              className="input"
+              required
+              name="message"
+              rows={7}
+              cols={33}
+              placeholder="Ваше сообщение..."
+            ></textarea>
           </label>
           <button className="button button-orange" type="submit">
             Отправить

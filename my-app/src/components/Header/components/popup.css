@@ -1,11 +1,11 @@
 .popup-container {
   position: absolute;
   z-index: 5;
-  left: calc(50% - (400px / 2));
-  top: calc(50% - (380px / 2));
+  left: calc(50% - (500px / 2));
+  top: calc(50% - (527px / 2));
   width: 100%;
-  max-width: 400px;
-  max-height: 500px;
+  max-width: 500px;
+  max-height: 600px;
   margin: 0 auto;
   padding: 20px;
   color: black;

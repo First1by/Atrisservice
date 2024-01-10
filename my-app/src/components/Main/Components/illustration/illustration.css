@@ -49,9 +49,10 @@
   z-index: 1;
   width: 750px;
   height: auto;
+  cursor: pointer;
 }
 
-.img1-container:after {
+/* .img1-text:after {
   position: absolute;
   top: 50px;
   left: 50px;
@@ -63,7 +64,7 @@
   border-radius: 10px;
 }
 
-.img1-container:hover::after {
+.img1-text:hover::after {
   content: 'Лонжероны от 300 руб';
   position: absolute;
   top: 50px;
@@ -76,5 +77,37 @@
   text-align: center;
   font-family: cursive;
   font-size: 16px;
+  transition: 0.5s all;
+} */
+
+.img1-text::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 100;
+  width: 250px;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: aquamarine;
+  border-radius: 10px;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.img1-text:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 25%;
+  left: 0;
+  z-index: 100;
+  width: 250px;
+  padding: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: aquamarine;
+  border-radius: 10px;
+  opacity: 1;
   transition: 0.5s all;
 }
