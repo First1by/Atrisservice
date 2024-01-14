@@ -19,7 +19,7 @@ function Player() {
         <ReactPlayer
           className="card-of-player"
           title="BMW F01"
-          url="video/w140.mp4"
+          url="video/bmw-f01.mp4"
           controls
           volume={0.5}
           playing
@@ -30,7 +30,7 @@ function Player() {
         <ReactPlayer
           className="card-of-player"
           title="Honda Civic"
-          url="video/w140.mp4"
+          url="video/honda-civic.mp4"
           controls
           volume={0.5}
           playing
@@ -41,7 +41,7 @@ function Player() {
         <ReactPlayer
           title="Subaru Forester"
           className="card-of-player"
-          url="video/w140.mp4"
+          url="video/subaru-forester.mp4"
           controls
           volume={0.5}
           playing
@@ -52,7 +52,7 @@ function Player() {
         <ReactPlayer
           title="Nissan Qashqai"
           className="card-of-player"
-          url="video/w140.mp4"
+          url="video/nissan-quash.mp4"
           controls
           volume={0.5}
           playing
@@ -63,7 +63,7 @@ function Player() {
         <ReactPlayer
           title="Skoda Octavia"
           className="card-of-player"
-          url="video/w140.mp4"
+          url="video/skoda.mp4"
           controls
           volume={0.5}
           playing

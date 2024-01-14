@@ -21,7 +21,7 @@ function Main() {
       <section>
         <Cards />
       </section>
-      <section className="company">
+      <section id="company" className="company">
         <Company />
       </section>
     </main>

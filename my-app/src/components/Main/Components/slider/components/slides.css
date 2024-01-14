@@ -74,6 +74,7 @@ div.slide-banner .info-block {
 
 .flex-icons a:hover img {
   background: aqua;
+  background: #dc1515;
   filter: brightness(1);
 }
 

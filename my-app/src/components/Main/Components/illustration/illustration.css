@@ -7,31 +7,32 @@
 
 .canvas-wrapper {
   position: relative;
-  height: 550px;
+  height: 615px;
+  overflow: auto;
 }
 
 .canvas-wrapper h2 {
   position: relative;
   margin: 30px auto;
   padding: 15px;
-  max-width: 58vw;
+  max-width: 950px;
   font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 1.5vw;
-  line-height: 85%;
+  /* font-size: 1.5vw; */
+  line-height: 35px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
   border-left: 3px solid red;
   background-color: rgba(0, 0, 0, 0.445);
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .canvas-wrapper h2 span {
   display: inline-block;
   margin-left: 2%;
-  padding: 1.5%;
+  padding: 1% 2%;
   border-radius: 5px;
   background: yellowgreen;
   cursor: pointer;
@@ -50,6 +51,18 @@
   width: 750px;
   height: auto;
   cursor: pointer;
+}
+
+@media screen and (max-width: 755px) {
+  .img1,
+  .img2,
+  .img3,
+  .img4,
+  .img5,
+  .img6,
+  .img-main {
+    left: 0;
+  }
 }
 
 /* .img1-text:after {
@@ -80,7 +93,7 @@
   transition: 0.5s all;
 } */
 
-.img1-text::after {
+/* .img1-text::after {
   content: attr(data-title);
   position: absolute;
   top: 25%;
@@ -110,4 +123,4 @@
   border-radius: 10px;
   opacity: 1;
   transition: 0.5s all;
-}
+} */

@@ -1,5 +1,5 @@
 import Blackout from 'components/Blackout';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Popup from './components/popup';
 import './header.css';
@@ -16,11 +16,40 @@ function Header() {
     togglePopup();
   };
 
+  // function documentOnclick(e: React.MouseEvent<HTMLElement>) {
+
+  // }
+
+  let burgerMenu: Element | null = null;
+  let iconBurger: Element | null = null;
+  let closeIconBurger = null;
+
+  useEffect(() => {
+    burgerMenu = document.querySelector('.header__burger');
+    iconBurger = document.querySelector('.header__burger-menu-icon');
+    closeIconBurger = document.querySelector('.header__burger-icon-close');
+  }, []);
+
+  function openPopup() {
+    if (burgerMenu) {
+      burgerMenu.classList.toggle('header__burger_active');
+    }
+    if (iconBurger) {
+      iconBurger.classList.toggle('header__burger-menu-icon');
+      iconBurger.classList.toggle('header__burger-icon-close');
+    }
+  }
+
   window.onclick = (e) => {
     if (e.target instanceof HTMLElement) {
       if (!e.target.closest('.popup-container') && !e.target.closest('.do-form') && !e.target.closest('.byeForm')) {
         setPopupVisible(false);
       }
+    }
+    if ((e.target as HTMLElement).closest('.header__nav-burger-list') && burgerMenu && iconBurger) {
+      burgerMenu.classList.remove('header__burger_active');
+      iconBurger.classList.toggle('header__burger-menu-icon');
+      iconBurger.classList.toggle('header__burger-icon-close');
     }
   };
 
@@ -57,16 +86,47 @@ function Header() {
               </NavLink>
             </li>
             <li className="menu-point btn-effect">Контакты</li>
-            {/* <li className="menu-point">
-              <NavLink className="App-link" to="tel:+375296384455">
-                +375 (29) 377-14-40
-              </NavLink>
-            </li> */}
           </ul>
         </nav>
         <button onClick={togglePopup} className="do-form">
           Оставить заявку
         </button>
+        <div onClick={openPopup} className="header__burger-menu-icon"></div>
+        <div className="header__burger">
+          <ul className="header__nav-burger-list">
+            <li className="menu-point ">
+              <NavLink className="App-link btn-effect" to="/services">
+                Услуги
+              </NavLink>
+            </li>
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/promo">
+                Акции
+              </NavLink>
+            </li>
+
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/price">
+                Цены
+              </NavLink>
+            </li>
+
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/reviews">
+                Отзывы
+              </NavLink>
+            </li>
+            <li className="menu-point">
+              <NavLink className="App-link btn-effect" to="/about">
+                О компании
+              </NavLink>
+            </li>
+            <li className="menu-point btn-effect">Контакты</li>
+          </ul>
+          <button className="do-form" onClick={togglePopup}>
+            Оставить заявку
+          </button>
+        </div>
       </div>
       <div className="banner">
         <NavLink to="/">

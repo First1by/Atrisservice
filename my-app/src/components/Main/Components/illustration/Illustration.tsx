@@ -13,16 +13,18 @@ const Illustration = () => {
 
   function onMove(e: React.MouseEvent<HTMLElement>): void {
     if (e.currentTarget) {
+      console.log(`X:${e.nativeEvent.offsetX}, Y:${e.nativeEvent.offsetY}`);
       for (let i = 0; i < coord.length; i++) {
         if (
-          (e.nativeEvent.offsetX > coord[i].x1 &&
-            e.nativeEvent.offsetX < coord[i].x2 &&
-            e.nativeEvent.offsetY > coord[i].y1 &&
-            e.nativeEvent.offsetY < coord[i].y2) ||
-          (e.nativeEvent.offsetX > 86 &&
-            e.nativeEvent.offsetX < 222 &&
-            e.nativeEvent.offsetY > 288 &&
-            e.nativeEvent.offsetY < 337)
+          e.nativeEvent.offsetX > coord[i].x1 &&
+          e.nativeEvent.offsetX < coord[i].x2 &&
+          e.nativeEvent.offsetY > coord[i].y1 &&
+          e.nativeEvent.offsetY < coord[i].y2
+          //   ||
+          // (e.nativeEvent.offsetX > 86 &&
+          //   e.nativeEvent.offsetX < 222 &&
+          //   e.nativeEvent.offsetY > 288 &&
+          //   e.nativeEvent.offsetY < 337)
         ) {
           setArea(coord[i].id);
           break;
@@ -65,6 +67,9 @@ const Illustration = () => {
   const img1 = document.querySelector('.img1') as HTMLElement;
   const img2 = document.querySelector('.img2') as HTMLElement;
   const img3 = document.querySelector('.img3') as HTMLElement;
+  const img4 = document.querySelector('.img4') as HTMLElement;
+  const img5 = document.querySelector('.img5') as HTMLElement;
+  const img6 = document.querySelector('.img6') as HTMLElement;
   const images = document.getElementsByTagName('img') as HTMLCollectionOf<HTMLImageElement>;
 
   useEffect(() => {
@@ -77,6 +82,15 @@ const Illustration = () => {
         break;
       case 3:
         img3.style.zIndex = '4';
+        break;
+      case 4:
+        img4.style.zIndex = '5';
+        break;
+      case 5:
+        img5.style.zIndex = '6';
+        break;
+      case 6:
+        img6.style.zIndex = '7';
         break;
 
       default:
@@ -94,14 +108,14 @@ const Illustration = () => {
       <h2>
         Выберите необходимую деталь для ремонта <span>Узнай стоимость</span>
       </h2>
-      <div className="img1-text" data-title="Лонжероны от 300 руб">
+      <div className="img1-text" title="Лонжероны от 300 руб">
         <img className="img1" src="/img/illustration/img1-longeron.png" alt="" />
       </div>
       <img className="img2" src="/img/illustration/img2-porog.png" title="Пороги от 150 руб" alt="" />
       <img className="img3" src="/img/illustration/img3-dno.png" title="Днище от 50 руб" alt="" />
       <img className="img4" src="/img/illustration/img4-stakan.png" title="Стаканы от 200 руб" alt="" />
       <img className="img5" src="/img/illustration/img5-zad-krylo.png" title="Крыло заднее от 130 руб" alt="" />
-      <img className="img6" src="/img/illustration/img6-bagazh.png" title="Днище багажника от 80 руб" alt="" />
+      <img className="img6" src="/img/illustration/img6-bagazh.png" title="Дно багажника от 80 руб" alt="" />
       <img className="img-main" src="/img/illustration/img-original.png" alt="" />
     </div>
   );

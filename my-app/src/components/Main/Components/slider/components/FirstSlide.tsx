@@ -12,7 +12,9 @@ export default function FirstSlide() {
           </h2>
           <p>Эксперт в области автомобильных сварочных работ</p>
         </div>
-        <button className="do-form">Подробнее</button>
+        <a className="do-form" href="#company">
+          Подробнее
+        </a>
         <div className="flex-icons">
           <a href="https://www.instagram.com/pervi_svarnoi/" rel="noreferrer" target="_blank">
             <img src="/img/icons/instagram.png" alt="instagram" />

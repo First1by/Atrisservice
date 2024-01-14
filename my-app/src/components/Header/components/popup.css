@@ -17,6 +17,7 @@
 .popup-container .form {
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
 }
 
 .input {
